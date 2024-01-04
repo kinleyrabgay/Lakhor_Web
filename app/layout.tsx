@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import './globals.css';
 import { ClerkProvider } from '@clerk/nextjs';
 
-export const fontSans = Inter({
+const poppins = Poppins({
   subsets: ['latin'],
-  variable: '--font-sans',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
 });
 
 export const metadata: Metadata = {
@@ -22,14 +23,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={cn(
-            'min-h-screen bg-background font-sans antialiased',
-            fontSans.variable
-          )}
-        >
-          {children}
-        </body>
+        <body className={poppins.className}>{children}</body>
       </html>
     </ClerkProvider>
   );
