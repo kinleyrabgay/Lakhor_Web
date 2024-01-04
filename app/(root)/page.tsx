@@ -3,9 +3,9 @@ import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <SignedIn>
-        <UserButton afterSignOutUrl="/" />
-      </SignedIn>
+      {/* <SignedIn>
+        <UserButton afterSignOutUrl='/'/>
+      </SignedIn> */}
     </main>
   );
 }
